@@ -6,10 +6,16 @@ const resultsSearch = document.querySelector('.results')
 let getData = '';
 let page = 1;
 
+// Loading images from an array list
+function getRandomQuery() {
+    const randomQueries = ['nature', 'city', 'technology', 'abstract', 'world', 'cocktail', 'chapel', 'foreign language', 'groomed', 'toast'];
+    const randomIndex = Math.floor(Math.random() * randomQueries.length);
+    return randomQueries[randomIndex];
+  }
+
 // Search for images by request in the input
-async function searchImages(getData){
-    getData = searchInput.value;
-    if(!getData)getData = 'random';
+async function searchImages(){
+    const getData = searchInput.value || getRandomQuery();
     const url = `https://api.unsplash.com/search/photos?query=${getData}&page=${page}&client_id=${accessKey}`;
 
     const response = await fetch(url);
