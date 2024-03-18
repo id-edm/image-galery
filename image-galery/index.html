@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <title>Image-galery</title>
+</head>
+
+<body onload="setFocus()">
+    <div class="wrapper">
+
+        <header class="header">
+
+            <div class="title">
+                <img src="./assets/icon/camera.svg" alt="foto-camera" class="foto__camera">
+                <h1 class="title__inner">Image Galery </h1>
+            </div>
+
+            <form class="search" action="url">
+
+                <div class="wrapper__input">
+                    <input class="search__input" type="text" placeholder="Enter image search . . . " id="search_id"
+                        autocomplete="off">
+                    <span class="clear" onclick="clearSearch()"></span>
+                </div>
+                <button class="search__btn">Search</button>
+
+            </form>
+
+        </header>
+
+        <main class="image__galery">
+
+            <div class="results">
+            </div>
+
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <a href="https://github.com/id-edm">
+                <img class="github-img" src="./assets/icon/github.svg" alt="GitHub" width="40" height="40">
+
+            </a>
+
+            <p class="created_date"> September 2023</p>
+
+            <a href="https://rs.school/js-stage0/">
+                <img src="https://rs.school/images/rs_school_js.svg" width="70" height="50" alt="RsSchool">
+            </a>
+
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
